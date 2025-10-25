@@ -71,16 +71,47 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// DODATKOWY CSS DO ANIMACJI W style.css:
-/*
-.fading-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 0.8s ease-out;
-}
 
-.fading-element.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/
+// 5. ANIMACJA LICZNIKA WYNIKÓW (Counter Animation)
+    const counterSection = document.querySelector('.counter-section');
+    const counters = document.querySelectorAll('.stat-number');
+    let counterExecuted = false;
+
+    // Funkcja do animowania pojedynczego licznika
+    function animateCounter(counter) {
+        const target = +counter.getAttribute('data-target');
+        const speed = 200; // Czas animacji (im wyższa liczba, tym wolniej)
+        const increment = target / speed;
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+            
+            // Jeśli osiągnięto cel
+            if (current >= target) {
+                clearInterval(timer);
+                counter.textContent = target.toLocaleString('pl-PL') + (target >= 1980 ? '+' : ''); // Dodanie +
+                return;
+            }
+
+            // Aktualizacja wyświetlanej liczby
+            counter.textContent = Math.ceil(current).toLocaleString('pl-PL');
+        }, 1);
+    }
+
+    // Intersection Observer, aby uruchomić animację tylko, gdy sekcja jest widoczna
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !counterExecuted) {
+                counters.forEach(animateCounter);
+                counterExecuted = true;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5 // Uruchom, gdy 50% sekcji jest widoczne
+    });
+
+    if (counterSection) {
+        counterObserver.observe(counterSection);
+    }

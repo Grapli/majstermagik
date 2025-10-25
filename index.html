@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="majstermagik - Usługi Naprawcze. Hydraulika, Elektryka i Stolarka w Warszawie. Szybkie usuwanie awarii i montaż.">
+    <meta name="description"
+        content="majstermagik - Usługi Naprawcze. Hydraulika, Elektryka i Stolarka w Warszawie. Szybkie usuwanie awarii i montaż.">
     <title>majstermagik - Usługi Naprawcze w Warszawie</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <header class="main-header">
         <div class="container">
             <a href="#hero" class="logo" aria-label="Strona główna majstermagik">
-                <img src="logo.png" alt="Logo firmy majstermagik">
+                <img src="/img/logo.png" alt="Logo firmy majstermagik">
             </a>
             <nav class="main-nav" aria-label="Główna nawigacja strony">
                 <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Menu</button>
@@ -21,7 +25,8 @@
                     <li><a href="#uslugi">Usługi</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
-                    <li><a href="tel:736123306" class="cta-tel" aria-label="Zadzwoń do majstermagik: 736 123 306">736 123 306</a></li>
+                    <li><a href="tel:736123306" class="cta-tel" aria-label="Zadzwoń do majstermagik: 736 123 306">736
+                            123 306</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,66 +35,224 @@
     <main>
         <section id="hero" class="hero" aria-labelledby="hero-title">
             <div class="container">
-                <h1 id="hero-title">Twoje kompleksowe wsparcie w awariach. Hydraulika, Elektryka, Stolarka.</h1>
-                <p class="subtitle">Szybkie i rzetelne usługi naprawcze w całej Warszawie.</p>
-                <a href="tel:736123306" class="btn btn-primary">Zadzwoń i umów wizytę!</a>
-                <img src="image3.jpg" alt="Fachowiec majstermagik - logo z elektrykiem i hydraulikiem" class="hero-image">
+                <div class="hero-content-overlay">
+                    <h1 id="hero-title">Twoje kompleksowe wsparcie w awariach. Hydraulika, Elektryka, Stolarka.</h1>
+                    <p class="subtitle">Szybkie i rzetelne usługi naprawcze w całej Warszawie.</p>
+                    <a href="tel:736123306" class="btn btn-primary">Zadzwoń i umów wizytę!</a>
+                </div>
             </div>
         </section>
 
-        <section id="uslugi" class="section services" aria-labelledby="services-title">
+        <section id="uslugi" class="section services fading-element" aria-labelledby="services-title">
             <div class="container">
-                <h2 id="services-title">Nasze Główne Usługi</h2>
+                <h2 id="services-title">Wszystkie Usługi Majstermagik: Hydraulik, Elektryk i Złota Rączka w Warszawie
+                </h2>
+
+                <p class="section-intro">
+                    Oferuję kompleksowy zakres <strong>usług naprawczych i montażowych</strong> w Twoim domu. Działam na
+                    terenie całej <strong>Warszawy</strong>. Niezależnie od tego, czy potrzebna jest pilna
+                    <strong>naprawa elektryczna</strong>, fachowy <strong>montaż mebli</strong>, czy wymiana
+                    <strong>baterii hydraulicznych</strong> – postaw na doświadczenie i rzetelność.
+                </p>
+
                 <div class="services-grid">
-                    <article class="service-card">
-                        <figure>
-                            <img src="elektryka_ikona.png" alt="Ikona: Wymiana różnicówki i montaż gniazdek">
+
+                    <article class="service-card" aria-labelledby="service-elektryka">
+                        <div class="card-header-flex">
+                            <figure>
+                                <img src="elektryka_ikona.png" alt="Ikona: Wymiana różnicówki, montaż gniazdek i lamp"
+                                    loading="lazy">
+                            </figure>
                             <figcaption>
-                                <h3>Elektryka i Oświetlenie</h3>
+                                <h3 id="service-elektryka">Elektryka i Oświetlenie w Warszawie</h3>
                             </figcaption>
-                        </figure>
-                        <p>Wymiana różnicówki, montaż/wymiana gniazdek, podłączenie żyrandoli i lamp. Szybka diagnostyka elektryczna.</p>
-                        <a href="#kontakt" class="btn btn-secondary">Zapytaj o usługę</a>
+                        </div>
+
+                        <ul class="service-list">
+                            <li>Wymiana <strong>różnicówki</strong> w skrzynce bezpieczników</li>
+                            <li>Montaż/wymiana <strong>gniazdka elektrycznego</strong> i wyłączników</li>
+                            <li>Montaż/podłączenie <strong>żyrandola</strong>, lamp i kinkietów</li>
+                            <li>Naprawa połączeń elektrycznych, <strong>diagnostyka elektryczna</strong></li>
+                            <li>Montaż <strong>wentylatora</strong> w łazience (z podłączeniem)</li>
+                        </ul>
+                        <p class="service-summary">Bezpieczne i profesjonalne <strong>usługi elektryczne</strong> na
+                            terenie <strong>całej Warszawy</strong>. Od małych napraw po podłączenie oświetlenia.</p>
+                        <a href="#kontakt" class="btn btn-secondary" aria-label="Zapytaj o usługę elektryczną">Zapytaj o
+                            usługę</a>
                     </article>
 
-                    <article class="service-card">
-                        <figure>
-                            <img src="hydraulika_ikona.png" alt="Ikona: Wymiana baterii i instalacja pralki">
+                    <article class="service-card" aria-labelledby="service-hydraulika">
+                        <div class="card-header-flex">
+                            <figure>
+                                <img src="hydraulika_ikona.png"
+                                    alt="Ikona: Wymiana baterii, montaż syfonu i podłączenie pralki" loading="lazy">
+                            </figure>
                             <figcaption>
-                                <h3>Hydraulika i Instalacje</h3>
+                                <h3 id="service-hydraulika">Hydraulika, AGD i Biały Montaż</h3>
                             </figcaption>
-                        </figure>
-                        <p>Wymiana baterii, montaż/wymiana syfonu, podłączenie pralki, zmywarki, instalacja umywalki i toalety.</p>
-                        <a href="#kontakt" class="btn btn-secondary">Zapytaj o usługę</a>
+                        </div>
+
+                        <ul class="service-list">
+                            <li>Wymiana <strong>baterii</strong> (kuchenne, łazienkowe) i węży</li>
+                            <li>Montaż/wymiana <strong>syfonu</strong> w umywalce</li>
+                            <li>Podłączenie / <strong>instalacja pralki</strong> i <strong>zmywarki</strong></li>
+                            <li>Instalacja umywalki i <strong>montaż toalety</strong> (biały montaż)</li>
+                            <li>Drobne naprawy i diagnostyka <strong>awarii hydraulicznych</strong></li>
+                        </ul>
+                        <p class="service-summary">Szybki i rzetelny <strong>hydraulik Warszawa</strong>. Usuwanie
+                            awarii, podłączanie AGD i montaż armatury.</p>
+                        <a href="#kontakt" class="btn btn-secondary" aria-label="Zapytaj o usługi hydrauliczne">Zapytaj
+                            o usługę</a>
                     </article>
 
-                    <article class="service-card">
-                        <figure>
-                            <img src="stolarka_ikona.png" alt="Ikona: Montaż mebli i renowacja blatów">
+                    <article class="service-card" aria-labelledby="service-stolarka">
+                        <div class="card-header-flex">
+                            <figure>
+                                <img src="stolarka_ikona.png" alt="Ikona: Montaż mebli, naprawa szaf wnękowych i blatów"
+                                    loading="lazy">
+                            </figure>
                             <figcaption>
-                                <h3>Montaż i Stolarka</h3>
+                                <h3 id="service-stolarka">Montaż Mebli i Drobne Naprawy</h3>
                             </figcaption>
-                        </figure>
-                        <p>Montaż mebli, szafy wnękowe, naprawa drzwi przesuwnych. Renowacja i konserwacja blatów kuchennych.</p>
-                        <a href="#kontakt" class="btn btn-secondary">Zapytaj o usługę</a>
+                        </div>
+
+                        <ul class="service-list">
+                            <li>Kompleksowy <strong>montaż mebli</strong> (IKEA, Agata, BRW, itp.)</li>
+                            <li>Składanie i instalacja <strong>szafy wnękowej</strong></li>
+                            <li>Naprawa <strong>drzwi przesuwnych</strong> i okuć meblowych</li>
+                            <li>Renowacja i konserwacja <strong>blatów kuchennych</strong></li>
+                            <li>Wszelkie inne usługi "złotej rączki"</li>
+                        </ul>
+                        <p class="service-summary">Doświadczony <strong>montażysta mebli</strong> i stolarz. Szybki,
+                            precyzyjny montaż i naprawa mebli w domu.</p>
+                        <a href="#kontakt" class="btn btn-secondary" aria-label="Zapytaj o montaż mebli">Zapytaj o
+                            usługę</a>
                     </article>
                 </div>
             </div>
         </section>
-        
+        <section id="stats" class="section counter-section" aria-label="Kluczowe fakty o Majstermagik">
+            <div class="container">
+                <h2 class="visually-hidden">Nasze wyniki</h2>
+                <div class="stats-grid">
+
+                    <div class="stat-item">
+                        <p class="stat-number" data-target="15">0</p>
+                        <p class="stat-label">Lat Doświadczenia</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <p class="stat-number" data-target="2000">0</p>
+                        <p class="stat-label">Wykonanych Zleceń</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <p class="stat-number" data-target="2000">0</p>
+                        <p class="stat-label">Zadowolonych Klientów</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <p class="stat-number" data-target="18">0</p>
+                        <p class="stat-label">Obsługiwanych Dzielnic Warszawy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="faq" class="section faq" aria-labelledby="faq-title">
             <div class="container">
                 <h2 id="faq-title">Najczęściej Zadawane Pytania</h2>
+
                 <div class="accordion">
+
                     <details class="faq-item">
-                        <summary>Jak szybko dojedziecie na awarię w Warszawie?</summary>
-                        <p>Naszym priorytetem jest szybka reakcja. W pilnych przypadkach staramy się dotrzeć do klienta najszybciej jak to możliwe, często w ciągu kilku godzin, w zależności od dzielnicy Warszawy.</p>
+                        <summary>Jakie usługi naprawcze i montażowe oferuje Majstermagik w Warszawie?</summary>
+                        <p>Jako <strong>Majstermagik Warszawa</strong>, specjalizuję się w kompleksowych
+                            usługach: <strong>Hydraulika</strong>
+                            (wymiana baterii, montaż syfonów, podłączenie pralki/zmywarki),
+                            <strong>Elektryka</strong> (wymiana
+                            różnicówki, montaż gniazdek, podłączenie lamp) oraz <strong>Montaż Mebli</strong> i
+                            drobne naprawy
+                            stolarskie. Zapewniam kompleksową pomoc domową dla każdej dzielnicy Warszawy.
+                        </p>
                     </details>
+
                     <details class="faq-item">
-                        <summary>Czy wystawiacie gwarancję na wykonane usługi?</summary>
-                        <p>Tak, na każdą wykonaną usługę otrzymujesz gwarancję. Szczegóły ustalamy indywidualnie, ale zawsze stawiamy na trwałość i rzetelność naszych napraw.</p>
+                        <summary>Czy Majstermagik świadczy usługi na terenie wszystkich dzielnic Warszawy?
+                        </summary>
+                        <p>Tak, oferuję pełen zakres usług w każdej dzielnicy <strong>Warszawy</strong>.
+                            Dojeżdżam do klienta na
+                            <strong>Mokotowie, Woli, Ursynowie, Pradze</strong>, a także w pozostałych rejonach.
+                            Gdziekolwiek
+                            potrzebujesz pomocy <strong>hydraulika</strong>, <strong>elektryka</strong> lub
+                            <strong>montażysty</strong>, jestem do Twojej
+                            dyspozycji.
+                        </p>
                     </details>
-                    </div>
+
+                    <details class="faq-item">
+                        <summary>Jaki jest najlepszy sposób, aby skontaktować się z Majstermagik w sprawie
+                            awarii?</summary>
+                        <p>Najszybszy kontakt w przypadku <strong>pilnej awarii</strong> to zawsze
+                            <strong>telefon</strong> pod numerem: <a href="tel:736123306">736 123 306</a>.
+                            Możesz również skorzystać z <strong>formularza kontaktowego</strong>
+                            lub wysłać wiadomość e-mail na adres majstermagik@icloud.com w przypadku
+                            mniej pilnych zleceń.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Ile kosztuje wymiana gniazdka lub montaż zmywarki przez Majstermagik?</summary>
+                        <p>Koszty usług <strong>Majstermagik</strong> zależą od rodzaju i skomplikowania pracy.
+                            Chociaż nie mam
+                            stałego cennika ze względu na różnorodność zleceń, zawsze zapewniam konkurencyjne
+                            ceny.
+                            <strong>Bezpłatną, indywidualną wycenę</strong> otrzymasz po kontakcie telefonicznym
+                            lub mailowym –
+                            skontaktuj się, by poznać <strong>koszt</strong> Twojej naprawy lub montażu.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Czy Majstermagik udziela gwarancji na prace hydrauliczne i elektryczne?
+                        </summary>
+                        <p>Tak, na wszystkie wykonane przeze mnie usługi udzielam <strong>gwarancji</strong>.
+                            Dbam o najwyższą
+                            jakość, rzetelność i trwałość napraw. Szczegółowy okres gwarancyjny jest zawsze
+                            potwierdzany
+                            podczas realizacji zlecenia.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Czy muszę przygotować narzędzia i materiały do wykonania usługi?</summary>
+                        <p>Nie, <strong>Majstermagik</strong> przyjeżdża zawsze z pełnym, profesjonalnym
+                            zestawem narzędzi,
+                            niezbędnym do wykonania większości prac hydraulicznych, elektrycznych i montażowych.
+                            Materiały eksploatacyjne mogę dostarczyć za dodatkową opłatą, jeśli klient nie ma
+                            własnych.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Jaki jest typowy czas realizacji zleceń, np. podłączenia pralki lub drobnych
+                            napraw?</summary>
+                        <p>Czas realizacji typowych zleceń (jak drobna <strong>naprawa połączeń
+                                elektrycznych</strong>, <strong>podłączenie
+                                sprzętu AGD</strong> czy <strong>wymiana baterii</strong>) to zazwyczaj 1 do 3
+                            godzin. W przypadku pilnych
+                            awarii staram się dotrzeć do klienta w <strong>Warszawie</strong> najszybciej, jak
+                            to możliwe.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Czy Majstermagik oferuje usługi oraz usuwanie awarii w weekendy?</summary>
+                        <p>Tak, usługi <strong>Majstermagik</strong> są dostępne również w
+                            <strong>weekendy</strong> oraz w nagłych przypadkach
+                            przez <strong>całą dobę</strong>. W przypadku pilnej potrzeby (np. zalanie, brak
+                            prądu) proszę o kontakt
+                            telefoniczny – postaram się o szybką reakcję.
+                        </p>
+                    </details>
+                </div>
             </div>
         </section>
 
@@ -99,40 +262,48 @@
                 <div class="contact-grid">
                     <div class="contact-info">
                         <p>Najszybszy kontakt:</p>
-                        <p class="phone-number"><a href="tel:736123306" aria-label="Telefon do majstermagik">736 123 306</a></p>
+                        <p class="phone-number"><a href="tel:736123306" aria-label="Telefon do majstermagik">736
+                                123
+                                306</a></p>
                         <p>Lub napisz do nas:</p>
-                        <p class="email-address"><a href="mailto:majstermagik@icloud.com" aria-label="Adres e-mail majstermagik">majstermagik@icloud.com</a></p>
+                        <p class="email-address"><a href="mailto:majstermagik@icloud.com"
+                                aria-label="Adres e-mail majstermagik">majstermagik@icloud.com</a></p>
                         <address>
-                            <p>Obsługujemy całą Warszawę.</p>
+                            <p>Obsługujemy całą <strong>Warszawę</strong>.</p>
+                            <p>W celu otrzymania dokładnej wyceny prosimy o kontakt</p>
+                            <p class="price-note">Cena za każdą uslugę ustalana jest indywidualnie z klientem.</p>
+                            <p class="discount-note">Dla stałych Klientów oferujemy korzystne rabaty!</p>
                         </address>
                     </div>
-                    
+
                     <form class="contact-form">
                         <label for="name">Imię:</label>
                         <input type="text" id="name" name="name" required>
-                        
+
                         <label for="phone">Telefon:</label>
                         <input type="tel" id="phone" name="phone" required>
-                        
+
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email">
-                        
+
                         <label for="message">Treść wiadomości:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
-                        
+
                         <div class="rodo-agreement">
                             <input type="checkbox" id="rodo" name="rodo" required>
-                            <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="#polityka-prywatnosci" target="_blank">Polityką Prywatności</a>. (KLUCZOWE!)</label>
+                            <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a
+                                    href="#polityka-prywatnosci" target="_blank">Polityką Prywatności</a>.
+                                (KLUCZOWE!)</label>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary">Wyślij Zapytanie</button>
                     </form>
                 </div>
             </div>
         </section>
-        
+
     </main>
-    
+
     <footer class="main-footer">
         <div class="container">
             <p>&copy; <span id="current-year"></span> majstermagik. Wszelkie prawa zastrzeżone.</p>
@@ -142,4 +313,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
