@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="majstermagik - Usługi Naprawcze. Hydraulika, Elektryka i Stolarka w Warszawie. Szybkie usuwanie awarii i montaż.">
+    <title>majstermagik - Usługi Naprawcze w Warszawie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Strona główna majstermagik">
+                <img src="logo.png" alt="Logo firmy majstermagik">
+            </a>
+            <nav class="main-nav" aria-label="Główna nawigacja strony">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Menu</button>
+                <ul id="menu-list">
+                    <li><a href="#uslugi">Usługi</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="tel:736123306" class="cta-tel" aria-label="Zadzwoń do majstermagik: 736 123 306">736 123 306</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title">Twoje kompleksowe wsparcie w awariach. Hydraulika, Elektryka, Stolarka.</h1>
+                <p class="subtitle">Szybkie i rzetelne usługi naprawcze w całej Warszawie.</p>
+                <a href="tel:736123306" class="btn btn-primary">Zadzwoń i umów wizytę!</a>
+                <img src="image3.jpg" alt="Fachowiec majstermagik - logo z elektrykiem i hydraulikiem" class="hero-image">
+            </div>
+        </section>
+
+        <section id="uslugi" class="section services" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title">Nasze Główne Usługi</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <figure>
+                            <img src="elektryka_ikona.png" alt="Ikona: Wymiana różnicówki i montaż gniazdek">
+                            <figcaption>
+                                <h3>Elektryka i Oświetlenie</h3>
+                            </figcaption>
+                        </figure>
+                        <p>Wymiana różnicówki, montaż/wymiana gniazdek, podłączenie żyrandoli i lamp. Szybka diagnostyka elektryczna.</p>
+                        <a href="#kontakt" class="btn btn-secondary">Zapytaj o usługę</a>
+                    </article>
+
+                    <article class="service-card">
+                        <figure>
+                            <img src="hydraulika_ikona.png" alt="Ikona: Wymiana baterii i instalacja pralki">
+                            <figcaption>
+                                <h3>Hydraulika i Instalacje</h3>
+                            </figcaption>
+                        </figure>
+                        <p>Wymiana baterii, montaż/wymiana syfonu, podłączenie pralki, zmywarki, instalacja umywalki i toalety.</p>
+                        <a href="#kontakt" class="btn btn-secondary">Zapytaj o usługę</a>
+                    </article>
+
+                    <article class="service-card">
+                        <figure>
+                            <img src="stolarka_ikona.png" alt="Ikona: Montaż mebli i renowacja blatów">
+                            <figcaption>
+                                <h3>Montaż i Stolarka</h3>
+                            </figcaption>
+                        </figure>
+                        <p>Montaż mebli, szafy wnękowe, naprawa drzwi przesuwnych. Renowacja i konserwacja blatów kuchennych.</p>
+                        <a href="#kontakt" class="btn btn-secondary">Zapytaj o usługę</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="section faq" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title">Najczęściej Zadawane Pytania</h2>
+                <div class="accordion">
+                    <details class="faq-item">
+                        <summary>Jak szybko dojedziecie na awarię w Warszawie?</summary>
+                        <p>Naszym priorytetem jest szybka reakcja. W pilnych przypadkach staramy się dotrzeć do klienta najszybciej jak to możliwe, często w ciągu kilku godzin, w zależności od dzielnicy Warszawy.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Czy wystawiacie gwarancję na wykonane usługi?</summary>
+                        <p>Tak, na każdą wykonaną usługę otrzymujesz gwarancję. Szczegóły ustalamy indywidualnie, ale zawsze stawiamy na trwałość i rzetelność naszych napraw.</p>
+                    </details>
+                    </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="section contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Skontaktuj się z majstermagik</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p>Najszybszy kontakt:</p>
+                        <p class="phone-number"><a href="tel:736123306" aria-label="Telefon do majstermagik">736 123 306</a></p>
+                        <p>Lub napisz do nas:</p>
+                        <p class="email-address"><a href="mailto:majstermagik@icloud.com" aria-label="Adres e-mail majstermagik">majstermagik@icloud.com</a></p>
+                        <address>
+                            <p>Obsługujemy całą Warszawę.</p>
+                        </address>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <label for="name">Imię:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="phone">Telefon:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                        
+                        <label for="message">Treść wiadomości:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <div class="rodo-agreement">
+                            <input type="checkbox" id="rodo" name="rodo" required>
+                            <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="#polityka-prywatnosci" target="_blank">Polityką Prywatności</a>. (KLUCZOWE!)</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Wyślij Zapytanie</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> majstermagik. Wszelkie prawa zastrzeżone.</p>
+            <p><a href="#polityka-prywatnosci">Polityka Prywatności</a> | Projekt i wykonanie: Frontend Developer</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

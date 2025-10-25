@@ -1,0 +1,343 @@
+/* RESET I ZASADY PODSTAWOWE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333333; /* Główny kolor tekstu */
+    background-color: #f8f8f8; /* Tło strony */
+    scroll-behavior: smooth; /* Płynne przewijanie do sekcji - UX */
+}
+
+/* KONTENER (CENTRUM RESPONSIVE DESIGN) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* TYPOGRAFIA WCAG */
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #2c5f87; /* Ciemny granat */
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+/* BUTTONS / CTA */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Płynne animacje - dynamika */
+}
+
+.btn-primary {
+    background-color: #2c5f87;
+    color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #f06d4e; /* Akcent drugorzędny */
+    transform: translateY(-2px); /* Delikatny ruch */
+}
+
+.btn-secondary {
+    background-color: #cda35c;
+    color: #333333;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #f06d4e;
+    color: white;
+}
+
+/* HEADER I NAWIGACJA */
+.main-header {
+    background-color: #2c5f87;
+    padding: 15px 0;
+    position: sticky; /* Zawsze na górze - UX */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* PRZYKŁAD WYSOKOŚCI GRAFIKI */
+    width: auto;
+    filter: brightness(0) invert(1); /* Uproszczenie koloru logo na biały, jeśli jest w środku */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #cda35c;
+}
+
+.cta-tel {
+    background-color: #cda35c;
+    color: #2c5f87 !important;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 1.1em;
+}
+
+/* UKRYCIE MENU MOBILE */
+.menu-toggle {
+    display: none; 
+}
+
+/* SEKCJA HERO */
+.hero {
+    background-color: #cda35c;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+.hero .subtitle {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    font-weight: 300;
+}
+
+.hero-image {
+    max-width: 300px; /* PRZYKŁADOWY RESIZE GRAFIKI */
+    height: auto;
+    margin-top: 20px;
+    /* Filtr dla grafiki - dostosuj kolorystykę */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); 
+}
+
+/* SEKCJE OGÓLNE */
+.section {
+    padding: 80px 0;
+}
+
+/* SEKCJA USŁUGI (GRID) */
+.services {
+    background-color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatyczna responsywność */
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 80px; /* PRZYKŁAD ROZMIARU IKON */
+    height: 80px;
+    margin-bottom: 15px;
+    /* DODAĆ STYL IKONOM */
+}
+
+/* SEKCJA KONTAKT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.phone-number a, .email-address a {
+    color: #2c5f87;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.rodo-agreement {
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+
+.rodo-agreement label {
+    display: inline; /* Aby checkbox był obok tekstu */
+    font-weight: normal;
+}
+
+/* SEKCJA FAQ (AKORDION) */
+.faq-item summary {
+    background-color: #cda35c;
+    color: #2c5f87;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.faq-item summary:hover {
+    background-color: #f06d4e;
+    color: white;
+}
+
+.faq-item p {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-top: none;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #333333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main-footer a {
+    color: #cda35c;
+    text-decoration: none;
+}
+
+/* ---------------------------------- */
+/* RESPONSIVE DESIGN (Mobile First)  */
+/* ---------------------------------- */
+
+@media (max-width: 900px) {
+    /* Węższy kontener dla małych ekranów */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Zmiana układu sekcji (np. kontakt) */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Zmniejszenie nagłówków */
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+/* Nawigacja mobilna */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none; /* Domyślnie ukrywamy listę linków */
+        flex-direction: column;
+        background-color: #2c5f87;
+        position: absolute;
+        top: 70px; /* Wysokość header */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    }
+
+    .main-nav ul.active {
+        display: flex; /* Pokazujemy po kliknięciu */
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Pokazujemy przycisk menu */
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .cta-tel {
+        margin-top: 10px;
+    }
+}
