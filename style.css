@@ -88,9 +88,10 @@ h2 {
 }
 
 .logo img {
-	height: 40px; /* PRZYKŁAD WYSOKOŚCI GRAFIKI */
+	height: 60px; /* PRZYKŁAD WYSOKOŚCI GRAFIKI */
 	width: auto;
-	filter: brightness(0) invert(1); /* Uproszczenie koloru logo na biały, jeśli jest w środku */
+    z-index: 100;
+	/* filter: brightness(0) invert(1); Uproszczenie koloru logo na biały, jeśli jest w środku */
 }
 
 .main-nav ul {
