@@ -128,7 +128,7 @@ h2 {
 /* SEKCJA HERO */
 .hero {
 	/* 1. MOBILE FIRST - Tło dla mobile */
-	background-image: url('/img/hero-mobile.jpg');
+	background-image: url('img/hero-mobile.jpg');
 	background-size: cover;
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -186,7 +186,7 @@ h2 {
 @media (min-width: 769px) {
 	.hero {
 		/* Tło dla DESKTOPÓW */
-		background-image: url('/img/hero-desktop.jpg');
+		background-image: url('img/hero-desktop.jpg');
 		background-attachment: fixed; /* Aktywacja efektu Parallax */
 		background-position: center center;
 		padding: 150px 0;
@@ -259,8 +259,8 @@ h2 {
 
 /* Nowe wymiary ikon, aby pasowały obok tytułu */
 .service-card img {
-	width: 50px;
-	height: 50px;
+	width: auto;
+	height: auto;
 	/* Usunięto: margin-bottom: 15px; */
 }
 
