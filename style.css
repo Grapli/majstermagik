@@ -4,37 +4,32 @@
 	margin: 0;
 	padding: 0;
 }
-
 body {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.6;
-	color: #333333; /* Główny kolor tekstu */
-	background-color: #f8f8f8; /* Tło strony */
-	scroll-behavior: smooth; /* Płynne przewijanie do sekcji - UX */
+	color: #333333; 
+	background-color: #f8f8f8;
+	scroll-behavior: smooth; 
 }
-
 /* KONTENER (CENTRUM RESPONSIVE DESIGN) */
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
-
 /* TYPOGRAFIA WCAG */
 h1,
 h2,
 h3 {
 	font-family: 'Oswald', sans-serif;
-	color: #2c5f87; /* Ciemny granat */
+	color: #2c5f87; 
 	margin-bottom: 0.5em;
 }
-
 h2 {
 	font-size: 2.5em;
 	text-align: center;
 	margin-bottom: 1em;
 }
-
 /* BUTTONS / CTA */
 .btn {
 	display: inline-block;
@@ -44,81 +39,65 @@ h2 {
 	text-decoration: none;
 	font-weight: 600;
 	cursor: pointer;
-	transition: background-color 0.3s, transform 0.2s; /* Płynne animacje - dynamika */
+	transition: background-color 0.3s, transform 0.2s;
 }
-
 .btn-primary {
 	background-color: #2c5f87;
 	color: white;
 }
-
 .btn-primary:hover,
 .btn-primary:focus {
-	background-color: #f06d4e; /* Akcent drugorzędny */
-	transform: translateY(-2px); /* Delikatny ruch */
+	background-color: #f06d4e; 
+	transform: translateY(-2px); 
 }
-
 .btn-secondary {
 	background-color: #cda35c;
 	color: #333333;
 	padding: 8px 15px;
 	font-size: 0.9em;
 }
-
 .btn-secondary:hover,
 .btn-secondary:focus {
 	background-color: #f06d4e;
 	color: white;
 }
-
 /* HEADER I NAWIGACJA */
 .main-header {
 	background-color: #2c5f87;
-	/* KLUCZOWA ZMIANA: Zmniejszenie paddingu, by zredukować wysokość nagłówka */
 	padding: 8px 0;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .main-header .container {
 	display: flex;
 	justify-content: space-between;
-	/* KLUCZOWE: Wyrównuje logo i nav na środku wertykalnie */
 	align-items: center;
 }
-
 .logo img {
-	/* Zmniejszenie wysokości logo do 50px dla bardziej kompaktowego nagłówka */
-	height: 50px;
+	height: auto;
 	width: auto;
 	z-index: 100;
-	/* Filtr pozostaje zakomentowany zgodnie z Twoimi życzeniami */
-	/* filter: brightness(0) invert(1); */
-}
 
+}
 .main-nav ul {
 	list-style: none;
 	display: flex;
 	gap: 25px;
 	align-items: center;
-	/* Upewnienie się, że nav nie ma marginesów, które ją rozciągają */
 	margin: 0;
 	padding: 0;
 }
-
 .main-nav a {
 	color: white;
 	text-decoration: none;
 	font-weight: 600;
 	transition: color 0.3s;
 }
-
 .main-nav a:hover {
 	color: #cda35c;
 }
-
 .cta-tel {
 	background-color: #cda35c;
 	color: #2c5f87 !important;
@@ -126,29 +105,24 @@ h2 {
 	border-radius: 3px;
 	font-size: 1.1em;
 }
-
 /* UKRYCIE MENU MOBILE */
 .menu-toggle {
 	display: none;
 }
-
 /* SEKCJA HERO */
 .hero {
-	/* 1. MOBILE FIRST - Tło dla mobile */
 	background-image: url('img/hero-mobile.jpg');
 	background-size: cover;
 	background-position: center top;
 	background-repeat: no-repeat;
 
 	color: white;
-	padding: 100px 0; /* Większy padding dla lepszego wyglądu */
+	padding: 100px 0; 
 	text-align: center;
 	position: relative;
 	overflow: hidden;
 	min-height: 450px;
 }
-
-/* 2. OVERLAY (Warstwa w kolorze #cda35c) dla Kontrastu (WCAG) */
 .hero::before {
 	content: '';
 	position: absolute;
@@ -157,24 +131,17 @@ h2 {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-
-	/* JEDNOLITY OVERLAY W KOLORZE #cda35c (jako RGBA dla przezroczystości) */
-	/* Użyjemy 70% krycia, aby tekst był wyraźnie widoczny */
 	background-color: rgba(24, 15, 1, 0.5);
 }
 
-/* Upewnienie się, że tekst i przycisk są na wierzchu */
 .hero .container {
 	position: relative;
 	z-index: 2;
 }
-
-/* 3. MOBILE FIRST - Style dla tekstu */
 .hero h1 {
 	color: white;
 	font-size: 2.5em;
 	margin-bottom: 0.2em;
-	/* Usuwamy text-shadow, jeśli przeszkadzał (lub zostawiamy subtelny, biały cień) */
 	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
@@ -183,23 +150,17 @@ h2 {
 	margin-bottom: 2em;
 	font-weight: 300;
 }
-
-/* Usuwamy już niepotrzebne style dla .hero-image */
 .hero-image {
 	display: none;
 }
-
-/* 4. MEDIA QUERY - Style dla DESKTOPÓW (min-width: 769px) */
 @media (min-width: 769px) {
 	.hero {
-		/* Tło dla DESKTOPÓW */
 		background-image: url('img/hero-desktop.jpg');
-		background-attachment: fixed; /* Aktywacja efektu Parallax */
+		background-attachment: fixed;
 		background-position: center center;
 		padding: 150px 0;
 		min-height: 600px;
 	}
-
 	.hero h1 {
 		font-size: 4em;
 	}
@@ -213,8 +174,6 @@ h2 {
 .services {
 	background-color: white;
 }
-
-/* Wprowadzający akapit */
 .section-intro {
 	text-align: center;
 	max-width: 800px;
@@ -222,14 +181,11 @@ h2 {
 	font-size: 1.1em;
 	color: #555;
 }
-
 .services-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 30px;
 }
-
-/* KLUCZOWA ZMIANA dla RÓWNEJ WYSOKOŚCI I PRZYCISKÓW NA DOLE */
 .service-card {
 	background-color: #f8f8f8;
 	padding: 30px;
@@ -237,76 +193,55 @@ h2 {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 	transition: transform 0.3s;
 
-	/* 1. Używamy Flexboxa do pionowego układania i wyrównania */
 	display: flex;
 	flex-direction: column;
-	height: 100%; /* Rozciąga kartę w Gridzie do maksymalnej wysokości rzędu */
-	text-align: left; /* Domyślne wyrównanie tekstu w kartach */
-	align-items: flex-start; /* Wyrównanie zawartości do lewej krawędzi */
+	height: 100%; 
+	text-align: left;
+	align-items: flex-start;
 }
-
 .service-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
-
-/* NOWA REGUŁA: Układ Ikona + Tytuł w jednym rzędzie */
 .card-header-flex {
 	display: flex;
-	align-items: center; /* Wyrównuje ikonę i tytuł w pionie (środek) */
+	align-items: center; 
 	gap: 15px;
-	margin-bottom: 20px; /* Odstęp od listy usług poniżej */
+	margin-bottom: 20px;
 	width: 100%;
 }
-
 .service-card figure {
-	/* Usuwamy stare marginesy, jeśli istniały */
 	margin: 0;
 }
-
-/* Nowe wymiary ikon, aby pasowały obok tytułu */
 .service-card img {
 	width: auto;
 	height: auto;
-	/* Usunięto: margin-bottom: 15px; */
 }
-
-/* Stylizacja list w kartach usług */
 .service-list {
 	list-style: disc inside;
 	padding-left: 0;
 	margin-bottom: 15px;
 	width: 100%;
 }
-
 .service-list li {
 	margin-bottom: 5px;
 }
-
-/* Paragraf pod listą */
 .service-summary {
 	margin-bottom: 20px;
 	width: 100%;
-	/* KLUCZOWA REGUŁA: To nie element, ale przycisk musi dostać auto-margin */
 }
-
-/* KLUCZOWA REGUŁA! Wypycha przycisk na sam dół karty */
 .service-card a.btn {
-	margin-top: auto; /* Wypycha go na dół */
-	align-self: center; /* Wyśrodkowanie samego przycisku w karcie */
+	margin-top: auto; 
+	align-self: center;
 }
-
 /* ---------------------------------- */
 /* SEKCJA LICZNIK (COUNTER)           */
 /* ---------------------------------- */
-
 .counter-section {
 	background-color: #2c5f87; /* Granatowe tło */
 	color: white;
 	padding: 60px 0;
 }
-
-/* Ukrycie nagłówka, jeśli nie jest potrzebny wizualnie, ale jest ważny dla WCAG */
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -317,32 +252,27 @@ h2 {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-
 .stats-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 30px;
 	text-align: center;
 }
-
 .stat-number {
 	font-family: 'Oswald', sans-serif;
 	font-size: 3.5em;
 	font-weight: 700;
-	color: #cda35c; /* Akcentujący kolor */
+	color: #cda35c;
 	line-height: 1;
 	margin-bottom: 5px;
 }
-
 .stat-label {
 	font-size: 1.1em;
 	font-weight: 400;
 }
-
-/* Responsywność dla urządzeń mobilnych - ewentualna zmiana układu */
 @media (max-width: 600px) {
 	.stats-grid {
-		grid-template-columns: 1fr; /* Przełączenie na jedną kolumnę na małych ekranach */
+		grid-template-columns: 1fr;
 	}
 }
 /* SEKCJA KONTAKT */
@@ -351,12 +281,10 @@ h2 {
 	grid-template-columns: 1fr 1.5fr;
 	gap: 50px;
 }
-
 .contact-info p {
 	font-size: 1.1em;
 	margin-bottom: 10px;
 }
-
 .phone-number a,
 .email-address a {
 	color: #2c5f87;
@@ -364,21 +292,18 @@ h2 {
 	text-decoration: none;
 	font-size: 1.2em;
 }
-
 .contact-form {
 	background-color: white;
 	padding: 30px;
 	border-radius: 8px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-
 .contact-form label {
 	display: block;
 	margin-top: 15px;
 	margin-bottom: 5px;
 	font-weight: 600;
 }
-
 .contact-form input[type='text'],
 .contact-form input[type='tel'],
 .contact-form input[type='email'],
@@ -389,17 +314,14 @@ h2 {
 	border-radius: 4px;
 	font-size: 1em;
 }
-
 .rodo-agreement {
 	margin: 15px 0;
 	font-size: 0.9em;
 }
-
 .rodo-agreement label {
-	display: inline; /* Aby checkbox był obok tekstu */
+	display: inline;
 	font-weight: normal;
 }
-
 /* SEKCJA FAQ (AKORDION) */
 .faq-item summary {
 	background-color: #cda35c;
@@ -411,12 +333,10 @@ h2 {
 	margin-top: 10px;
 	transition: background-color 0.3s;
 }
-
 .faq-item summary:hover {
 	background-color: #f06d4e;
 	color: white;
 }
-
 .faq-item p {
 	padding: 15px;
 	border: 1px solid #eee;
@@ -424,7 +344,6 @@ h2 {
 	background-color: white;
 	border-radius: 0 0 5px 5px;
 }
-
 /* FOOTER */
 .main-footer {
 	background-color: #333333;
@@ -433,45 +352,34 @@ h2 {
 	text-align: center;
 	font-size: 0.9em;
 }
-
 .main-footer a {
 	color: #cda35c;
 	text-decoration: none;
 }
-
 /* ---------------------------------- */
 /* RESPONSIVE DESIGN (Mobile First)  */
 /* ---------------------------------- */
-
 @media (max-width: 900px) {
-	/* Węższy kontener dla małych ekranów */
 	.container {
 		padding: 0 15px;
 	}
-
-	/* Zmiana układu sekcji (np. kontakt) */
 	.contact-grid {
 		grid-template-columns: 1fr;
 	}
-
-	/* Zmniejszenie nagłówków */
 	.hero h1 {
 		font-size: 2.2em;
 	}
-
 	h2 {
 		font-size: 2em;
 	}
 }
-
-/* Nawigacja mobilna */
 @media (max-width: 768px) {
 	.main-nav ul {
-		display: none; /* Domyślnie ukrywamy listę linków */
+		display: none; 
 		flex-direction: column;
 		background-color: #2c5f87;
 		position: absolute;
-		top: 70px; /* Wysokość header */
+		top: 70px;
 		left: 0;
 		width: 100%;
 		padding: 20px 0;
@@ -480,7 +388,7 @@ h2 {
 	}
 
 	.main-nav ul.active {
-		display: flex; /* Pokazujemy po kliknięciu */
+		display: flex;
 	}
 
 	.main-nav li {
@@ -488,7 +396,7 @@ h2 {
 	}
 
 	.menu-toggle {
-		display: block; /* Pokazujemy przycisk menu */
+		display: block;
 		background: none;
 		color: white;
 		border: 1px solid white;
