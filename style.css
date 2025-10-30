@@ -74,8 +74,9 @@ h2 {
 /* HEADER I NAWIGACJA */
 .main-header {
 	background-color: #2c5f87;
-	padding: 15px 0;
-	position: sticky; /* Zawsze na górze - UX */
+	/* KLUCZOWA ZMIANA: Zmniejszenie paddingu, by zredukować wysokość nagłówka */
+	padding: 8px 0;
+	position: sticky;
 	top: 0;
 	z-index: 1000;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -84,14 +85,17 @@ h2 {
 .main-header .container {
 	display: flex;
 	justify-content: space-between;
+	/* KLUCZOWE: Wyrównuje logo i nav na środku wertykalnie */
 	align-items: center;
 }
 
 .logo img {
-	height: 60px; /* PRZYKŁAD WYSOKOŚCI GRAFIKI */
+	/* Zmniejszenie wysokości logo do 50px dla bardziej kompaktowego nagłówka */
+	height: 50px;
 	width: auto;
-    z-index: 100;
-	/* filter: brightness(0) invert(1); Uproszczenie koloru logo na biały, jeśli jest w środku */
+	z-index: 100;
+	/* Filtr pozostaje zakomentowany zgodnie z Twoimi życzeniami */
+	/* filter: brightness(0) invert(1); */
 }
 
 .main-nav ul {
@@ -99,6 +103,9 @@ h2 {
 	display: flex;
 	gap: 25px;
 	align-items: center;
+	/* Upewnienie się, że nav nie ma marginesów, które ją rozciągają */
+	margin: 0;
+	padding: 0;
 }
 
 .main-nav a {
@@ -355,7 +362,7 @@ h2 {
 	color: #2c5f87;
 	font-weight: bold;
 	text-decoration: none;
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 
 .contact-form {

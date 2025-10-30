@@ -1,41 +1,42 @@
 <?php
 
-// 1. Odbiór danych z formularza
+// Ustawienia odbiorcy
+$to = "majstermagik@icloud.com"; // ZMIENIONY ADRES ODBIORCY NA MAJSTERMAGIK
+$subject = "NOWA WIADOMOŚĆ ZE STRONY MAJSTERMAGIK";
+
+// Odbiór danych z formularza (zgodnie z atrybutami name w Twoim HTML)
 $name = $_POST["name"];
-// Zmieniono z "email" na "from", aby było spójne z formularzem HTML
-$from = $_POST["from"]; 
-$phone = $_POST["phone"]; // Odbieramy numer telefonu
+$client_email = $_POST["from"]; // Pole E-mail
+$phone = $_POST["phone"]; // Pole Telefonu
+$message = $_POST["msg"]; // Pole Treść wiadomości
 
-// 2. Dane statyczne
-// ZMIEŃ TO NA WŁAŚCIWY ADRES E-MAIL MAJSTERMAGIK
-$to = "majstermagik@icloud.com"; 
-$subject = "Zapytanie ze strony: " . $name;
-$site_name = "majstermagik.pl"; // Użyj nazwy strony w treści
+// 1. Walidacja RODO (minimalna, po stronie serwera)
+if (!isset($_POST['rodo'])) {
+    header("Location: /index.html#kontakt?mail_status=error");
+    exit;
+}
 
-// 3. Budowanie treści wiadomości
-$txt = "Wiadomość ze strony " . $site_name . "\r\n";
-$txt .= "---------------------------------------\r\n";
-$txt .= "Imię: " . $name . "\r\n";
-$txt .= "Telefon: " . $phone . "\r\n"; // DODANO NUMER TELEFONU
-$txt .= "Email: " . $from . "\r\n";
-$txt .= "---------------------------------------\r\n";
-$txt .= "Treść wiadomości:\r\n" . $_POST["msg"];
+// 2. Budowanie treści wiadomości
+$txt = "Wysłano przez: " . $name . "\r\n";
+$txt .= "Telefon: " . $phone . "\r\n";
+$txt .= "Email: " . $client_email . "\r\n\r\n";
+$txt .= "Treść wiadomości:\r\n" . $message;
 
-// 4. Ustawienie nagłówków (Headers)
+// 3. Ustawienie nagłówków (poprawione dla lepszej dostarczalności)
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
-// Zmieniono nadawcę, aby zwiększyć szanse na dostarczenie (używamy serwera)
-$headers .= "From: Formularz Kontaktowy <majstermagik@icloud.com>" . "\r\n"; 
-$headers .= "Reply-To: " . $from . "\r\n";
+// Używamy adresu serwera, ale ustawiamy Reply-To na email klienta
+$headers .= "From: Formularz Majstermagik <kontakt@majstermagik.pl>" . "\r\n"; 
+$headers .= "Reply-To: " . $client_email . "\r\n";
 
-// 5. Wysłanie maila
+// 4. Wysłanie maila
 $mail_status = mail($to, $subject, $txt, $headers);
 
-// 6. Przekierowanie zwrotne (pamiętaj o pełnej ścieżce jeśli strona jest w subfolderze)
+// 5. Przekierowanie zwrotne (na sekcję kontakt)
 if ($mail_status) {
-    header("Location: /index.html?mail_status=sent");
+    header("Location: /index.html#kontakt?mail_status=sent");
 } else {
-    header("Location: /index.html?mail_status=error");
+    header("Location: /index.html#kontakt?mail_status=error");
 }
 
 ?>
