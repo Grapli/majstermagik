@@ -17,7 +17,7 @@
     <header class="main-header">
         <div class="container">
             <a href="#hero" class="logo" aria-label="Strona główna majstermagik">
-                <!-- <img src="img/ship.png" alt="Logo firmy majstermagik"> -->
+                <img src="img/logo.png" alt="Logo firmy majstermagik">
             </a>
             <nav class="main-nav" aria-label="Główna nawigacja strony">
                 <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Menu</button>
@@ -63,6 +63,21 @@
                     narzędzi i gwarancją jakości.
                 </p>
 
+                <h2 id="services-title">Elektryka i Oświetlenie</h2>
+                <p class="section-intro">
+                    Bezpieczna i sprawna instalacja – koniec z brakiem światła i ryzykiem
+                    kolejnej awarii.
+                </p>
+                <h2 id="services-title">Hydraulika, AGD i Biały Montaż</h2>
+                <p class="section-intro">
+                    Szybka interwencja hydrauliczna i podłączenie sprzętu – zapobiegamy
+                    zalaniu lub uszkodzeniu domu.
+                </p>
+                <h2 id="services-title">Montaż Mebli i Drobne Naprawy</h2>
+                <p class="section-intro">
+                    Nowe meble? Naprawa drzwi? Zadbamy o detale, by Twój dom działał
+                    sprawnie.
+                </p>
 
 
                 <div class="services-grid">
@@ -131,11 +146,11 @@
                         </div>
 
                         <ul class="service-list">
-                            <li>Kompleksowy <strong>montaż mebli</strong> (IKEA, Agata, BRW, itp.)</li>
-                            <li>Składanie i instalacja <strong>szafy wnękowej</strong></li>
-                            <li>Naprawa <strong>drzwi przesuwnych</strong> i okuć meblowych</li>
-                            <li>Renowacja i konserwacja <strong>blatów kuchennych</strong></li>
-                            <li>Wszelkie inne usługi "złotej rączki"</li>
+                            <li>Projekt zabudowy wnękowej i pełna realizacja</li>
+                            <li>Naprawa drzwi przesuwnych</li>
+                            <li>Wymiana frontów kuchennych i okuć meblowych (zawiasy)</li>
+                            <li>Kompleksowy montaż mebli (IKEA, Agata, BRW, itp.)</li>
+                            <li>Wszelkie inne usługie stolarskie małe i duże</li>
                         </ul>
                         <p class="service-summary">Doświadczony <strong>montażysta mebli</strong> i stolarz. Szybki,
                             precyzyjny montaż i naprawa mebli w domu.</p>
@@ -290,7 +305,8 @@
                         </address>
                     </div>
 
-                    <form class="contact-form">
+                    <form class="contact-form" action="send_mail.php" method="POST">
+
                         <label for="name">Imię:</label>
                         <input type="text" id="name" name="name" required>
 
@@ -298,10 +314,10 @@
                         <input type="tel" id="phone" name="phone" required>
 
                         <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="from">
 
                         <label for="message">Treść wiadomości:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="msg" rows="5" required></textarea>
 
                         <div class="rodo-agreement">
                             <input type="checkbox" id="rodo" name="rodo" required>
