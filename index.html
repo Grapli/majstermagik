@@ -17,7 +17,7 @@
     <header class="main-header">
         <div class="container">
             <a href="#hero" class="logo" aria-label="Strona główna majstermagik">
-                <img src="img/ship.png" alt="Logo firmy majstermagik">
+                <!-- <img src="img/ship.png" alt="Logo firmy majstermagik"> -->
             </a>
             <nav class="main-nav" aria-label="Główna nawigacja strony">
                 <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Menu</button>
@@ -37,6 +37,7 @@
             <div class="container">
                 <div class="hero-content-overlay">
                     <h1 id="hero-title">Twoje kompleksowe wsparcie w awariach. Hydraulika, Elektryka, Stolarka.</h1>
+                    <p class="subtitle">Usługi typu “Złota Rączka”</p>
                     <p class="subtitle">Szybkie i rzetelne usługi naprawcze w całej Warszawie.</p>
                     <a href="tel:736123306" class="btn btn-primary">Zadzwoń i umów wizytę!</a>
                 </div>
@@ -45,18 +46,26 @@
 
         <section id="uslugi" class="section services fading-element" aria-labelledby="services-title">
             <div class="container">
-                <h2 id="services-title">Wszystkie Usługi Majstermagik: Hydraulik, Elektryk i Złota Rączka w Warszawie
-                </h2>
-
+                <h2 id="services-title">Awaria w domu?</h2>
                 <p class="section-intro">
-                    Oferuję kompleksowy zakres <strong>usług naprawczych i montażowych</strong> w Twoim domu. Działam na
-                    terenie całej <strong>Warszawy</strong>. Niezależnie od tego, czy potrzebna jest pilna
-                    <strong>naprawa elektryczna</strong>, fachowy <strong>montaż mebli</strong>, czy wymiana
-                    <strong>baterii hydraulicznych</strong> – postaw na doświadczenie i rzetelność.
+                    Hydraulika, Elektryka, Stolarka
+                </p>
+                <p class="section-intro">
+                    Dojazd i szybka naprawa w <strong>Warszawie</strong> – odzyskaj komfort szybko i rzetelnie.
                 </p>
 
-                <div class="services-grid">
+                <h2 id="services-title">Zmagasz się z awarią hydrauliki, elektryki lub potrzebujesz montażu
+                    mebli w Warszawie?</h2>
+                <p class="section-intro">
+                    Jako MajsterMagik przyjeżdżamy na miejsce, diagnozujemy i naprawiamy —
+                    niezależnie, czy to wymiana syfonu w łazience, montaż lampy, czy złożenie
+                    szafy wnękowej. Pomagamy we wszystkich dzielnicach, z pełnym zestawem
+                    narzędzi i gwarancją jakości.
+                </p>
 
+
+
+                <div class="services-grid">
                     <article class="service-card" aria-labelledby="service-elektryka">
                         <div class="card-header-flex">
                             <figure>
@@ -64,7 +73,9 @@
                                     loading="lazy">
                             </figure>
                             <figcaption>
-                                <h3 id="service-elektryka">Elektryka i Oświetlenie w Warszawie</h3>
+                                <h3 id="service-elektryka">Elektryka i Oświetlenie w Warszawie
+                                    pełen zakres do 1kv oraz drobne prace elektryczne
+                                </h3>
                             </figcaption>
                         </div>
 
@@ -74,6 +85,7 @@
                             <li>Montaż/podłączenie <strong>żyrandola</strong>, lamp i kinkietów</li>
                             <li>Naprawa połączeń elektrycznych, <strong>diagnostyka elektryczna</strong></li>
                             <li>Montaż <strong>wentylatora</strong> w łazience (z podłączeniem)</li>
+                            <li>Inne</li>
                         </ul>
                         <p class="service-summary">Bezpieczne i profesjonalne <strong>usługi elektryczne</strong> na
                             terenie <strong>całej Warszawy</strong>. Od małych napraw po podłączenie oświetlenia.</p>
@@ -88,7 +100,7 @@
                                     alt="Ikona: Wymiana baterii, montaż syfonu i podłączenie pralki" loading="lazy">
                             </figure>
                             <figcaption>
-                                <h3 id="service-hydraulika">Hydraulika, AGD i Biały Montaż</h3>
+                                <h3 id="service-hydraulika">Hydraulika, Montaż AGD i Biały Montaż</h3>
                             </figcaption>
                         </div>
 
@@ -98,6 +110,8 @@
                             <li>Podłączenie / <strong>instalacja pralki</strong> i <strong>zmywarki</strong></li>
                             <li>Instalacja umywalki i <strong>montaż toalety</strong> (biały montaż)</li>
                             <li>Drobne naprawy i diagnostyka <strong>awarii hydraulicznych</strong></li>
+                            <li>Udrażnianie instalacji kanalizacyjnej</li>
+                            <li>Inne</li>
                         </ul>
                         <p class="service-summary">Szybki i rzetelny <strong>hydraulik Warszawa</strong>. Usuwanie
                             awarii, podłączanie AGD i montaż armatury.</p>
@@ -292,8 +306,8 @@
                         <div class="rodo-agreement">
                             <input type="checkbox" id="rodo" name="rodo" required>
                             <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a
-                                    href="#polityka-prywatnosci" target="_blank">Polityką Prywatności</a>.
-                                (KLUCZOWE!)</label>
+                                    href="polityka-prywatnosci.html" target="_blank">Polityką Prywatności</a>.
+                            </label>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Wyślij Zapytanie</button>
@@ -307,7 +321,7 @@
     <footer class="main-footer">
         <div class="container">
             <p>&copy; <span id="current-year"></span> majstermagik. Wszelkie prawa zastrzeżone.</p>
-            <p><a href="#polityka-prywatnosci">Polityka Prywatności</a></p>
+            <p><a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
         </div>
     </footer>
 
