@@ -30,11 +30,7 @@ h2 {
 	text-align: center;
 	margin-bottom: 1em;
 }
-h3{
-	text-align: center;
-	font-size: 1.8em;
-	margin-bottom: 0.8em;
-}
+
 /* BUTTONS / CTA */
 .btn {
 	display: inline-block;
@@ -241,6 +237,11 @@ h3{
 .service-card a.btn {
 	margin-top: auto;
 	align-self: center;
+}
+.service-class {
+	font-size: 1.6em;
+	text-align: center;
+
 }
 /* ---------------------------------- */
 /* SEKCJA LICZNIK (COUNTER)           */
